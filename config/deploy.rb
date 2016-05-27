@@ -35,8 +35,8 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-set :migration_role, :db
-set :migration_servers, -> {primary(fetch(:migration_role)) }
+set :migration_role, :app
+# set :migration_servers, -> {primary(fetch(:migration_role)) }
 
 namespace :deploy do
 
