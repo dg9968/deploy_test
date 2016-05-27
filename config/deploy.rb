@@ -36,9 +36,7 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # set :keep_releases, 5
 
 set :migration_role, :db
-set :migration_servers, -> {primary(fetch(:migration_role))}
-	
-end
+set :migration_servers, -> {primary(fetch(:migration_role)) }
 
 namespace :deploy do
 
